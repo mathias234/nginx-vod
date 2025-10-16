@@ -1,0 +1,23 @@
+services:
+  nginx-vod:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Mount your nginx configuration
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # Optional: mount additional config files
+      # - ./conf.d:/etc/nginx/conf.d:ro
+      # Mount your video files
+      - ./videos:/var/www/videos:ro
+      # Optional: mount SSL certificates
+      # - ./certs:/etc/nginx/certs:ro
+      # Optional: persist logs
+      # - ./logs:/var/log/nginx
+    restart: unless-stopped
+    # Optional: set memory limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 512M
