@@ -13,6 +13,10 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     wget \
     git \
+    libavcodec-dev \
+    libavformat-dev \
+    libavutil-dev \
+    libswscale-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp
@@ -74,6 +78,10 @@ RUN apt-get update && apt-get install -y \
     libssl3t64 \
     zlib1g \
     ca-certificates \
+    libavcodec60 \
+    libavformat60 \
+    libavutil58 \
+    libswscale7 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy nginx binary and related files from builder
