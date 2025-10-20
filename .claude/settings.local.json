@@ -4,7 +4,16 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:ubuntu.com)",
       "Bash(docker run:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(docker-compose exec:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(curl:*)",
+      "Bash(docker-compose restart:*)",
+      "Read(//tmp/**)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
